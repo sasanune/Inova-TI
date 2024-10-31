@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('./info-res.css');
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf4db;
+}
+
+/* Bloquear scroll horizontal apenas */
+body.no-scroll {
+    overflow-x: hidden;
+    height: 100%; /* Mantém a altura fixa para evitar rolagem */
+}
+
+/* Botão de toggle */
+.toggle-button {
+    top: 10px;
+    left: 10px;
+    background-color: #00000000;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #00336600;
+    transform: scale(1.);
+}
+
+
+#toggle-dark-mode {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mãozinha no hover */
+}
+
+.icon i, .settings-icon i {
+    font-size: 18px; /* Tamanho dos ícones */
+}
+
+.icon, .settings-icon {
+    margin-right: 0px; /* Espaçamento entre os ícones */
+}
+
+.settings-icon {
+    margin-right: 0; /* Remove o espaçamento à direita do último ícone, se necessário */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    align-self: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #f0ddaa;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    margin-right: 55%;
+
+}
+
+.navbar-middle,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.sidebar h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    line-height: 70px;
+}
+
+
+
+.navbar-right .icon {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #e32d40;
+    text-decoration: none;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #152b3c;
+}
+
+/* Estilo da Dashboard */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Sidebar padrão (inicialmente escondida) */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #e47c5d;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Fora da tela à esquerda */
+    transition: left 0.6s ease-in-out; /* Transição suave para abertura */
+}
+
+/* Quando o aside for visível */
+.sidebar.active {
+    left: 0; /* Mostra o aside */
+}
+
+
+aside {
+    width: 250px;
+    background: #e47c5d; /* color2 */
+    color: white;
+    text-align: center;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside.closed {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+aside h2 {
+    text-align: center;
+    color: #f0ddaa;
+    text-decoration: none;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+aside nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin: 20px 0;
+    transition: font-size 0.2s ease;
+}
+
+aside nav ul li a:hover {
+    text-decoration: none;
+    padding: 7px;
+    background: linear-gradient(#e66d49, #e47c5d);
+    font-size: 14px;
+}
+
+/* Estiliza a largura e o fundo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent; /* Cor de fundo da barra */
+}
+
+/* Estiliza o "track" (a trilha por onde o thumb rola) */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da trilha */
+}
+
+/* Estiliza o "thumb" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #e32d40; /* Cor do thumb */
+    border-radius: 6px; /* Deixa as bordas arredondadas */
+    border: 2px solid #1a314a00; /* Adiciona uma borda ao redor do thumb */
+}
+
+/* Estiliza o thumb ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a51c2a; /* Cor do thumb ao passar o mouse */
+}
+
+.rodape_projeto {
+    text-align: center;
+    padding: 0px; /* Reduz o padding para deixar mais fino */
+    background-color: #e32d40;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: auto; /* Deixa a altura automática para ajustar ao conteúdo */
+    bottom: 0;
+    font-size: 12px; /* Ajusta o tamanho da fonte para ser mais compacto */
+    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+    box-shadow: 0 -2px 5px rgba(51, 51, 51, 0.5); /* Sombra na parte superior */
+}
+
+.navbar, .main-content, .rodape_projeto, .dropdown {
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Abertura rápida */
+}
+
+.navbar.move-right,
+.main-content.move-right,
+.rodape_projeto.move-right {
+    transform: translateX(250px); /* Move 250px para a direita */
+    transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
+}
+
+.dropdown.move-right {
+    transform: translateX(-30%); /* Move 250px para a direita */
+    transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
+}
+
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px; /* Ajustado para melhor alinhamento */
+    color: #333;
+}
+
+
+/* ---------- */
+
+/* estilos especificos */
+
+/* ---------- */
+
+/* Estilo da Dashboard */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Imagem dos livros */
+.book img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Resultados */
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para a barra de pesquisa */
+.search-bar {
+    margin: 20px auto;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #4e4a6d00;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #e32d40;
+    color: white;
+    font-weight: 400;
+}
+
+
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #1a314a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Inputs e botões do modal */
+.modal input[type="text"],
+.modal button {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.modal input[type="text"] {
+    width: 80%;
+    border: 1px solid #4e4a6d;
+    border-radius: 5px;
+}
+
+.modal button {
+    background-color: #e32d40;
+    /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #a51c2a;
+    /* Cor ao passar o mouse */
+}
+
+.book {
+    border-radius: 20px;
+    padding: 1px;
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.book-cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.book-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)); /* Gradiente mais forte */
+    color: white;
+    padding: 20px 15px; /* Reduzi o padding para dar mais espaço ao texto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    line-height: 18px; /* Reduzido para apertar mais o texto */
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 14px; /* Tamanho de fonte menor */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    word-wrap: break-word; /* Quebra as palavras longas se necessário */
+}
+
+.book-info a {
+    display: inline-block; /* Isso faz o link se comportar como um botão */
+    padding: 8px 16px; /* Espaçamento interno para criar a aparência de botão */
+    background-color: #e32d40; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.book-info a:hover {
+    background-color: #a51c2a; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+.book-cover:hover .book-info {
+    opacity: 1;
+
+}

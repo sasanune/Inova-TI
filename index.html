@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Página de Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="" class="sign-in-form" id="sign-in-form">
+                    <h2 class="title">Entre agora!</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="email" id="login-email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-senha" placeholder="Senha" required />
+                    </div>
+                    <input type="submit" value="Entrar" class="btn solid" />
+                </form>
+
+                <form action="" class="sign-up-form" id="sign-up-form">
+                    <h2 class="title">Cadastre-se</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="signup-nome" placeholder="Nome" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signup-senha" placeholder="Senha" required />
+                    </div>
+                    <input type="submit" value="Cadastrar" class="btn solid" />
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Novo aqui?</h3>
+                    <p>Crie sua conta! Preencha o cadastro para começar a usar nossa plataforma.</p>
+                    <button class="btn transparent" id="sign-up-btn">Cadastro</button>
+                </div>
+                <img src="./img/singin-pana.svg" class="image" alt="" width="350">
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Já tem conta?</h3>
+                    <p>Bem-vindo de volta! Por favor, entre com seus dados para continuar.</p>
+                    <button class="btn transparent" id="sign-in-btn">Login</button>
+                </div>
+                <img src="./img/Login-bro.svg" class="image" alt="" width="400" height="auto">
+            </div>
+        </div>
+
+        <button id="toggle-dark-mode" class="btn dark-mode-toggle">Modo Noturno</button>
+    </div>
+
+    <script type="module" src="./scripts/login.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>

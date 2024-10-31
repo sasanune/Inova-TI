@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Informações</title>
+        <link rel="stylesheet" href="./styles/gradeCurricular.css">
+        <link rel="stylesheet" href="./styles/info-res.css">    
+        <script type="module">
+            import { calcularNotas } from './scripts/gradeCurricular.js';
+        </script> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="menu">
+                <button id="toggle-aside" class="toggle-button">☰</button>
+            </div>
+
+            <div class="navbar-left">
+                <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
+            </div>
+
+            <div class="navbar-right">
+                <a href="#" class="icon">
+                    <i class="ri-mail-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-chat-1-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-notification-3-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-settings-2-line"></i>
+                </a>
+                <button id="toggle-dark-mode" class="icon">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <div class="user-menu">
+                    <span id="user-name"
+                        style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                        NOME DO ALUNO
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-container">
+            <aside id="sidebar" class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="main.html" class="nav-link">
+                                <h2>HOME</h2>
+                            </a></li>
+                        <li><a href="info.html" class="nav-link">
+                                <h2>INFO</h2>
+                            </a></li>
+                        <li><a href="gradeCurricular.html" class="nav-link">
+                                <h2>NOTAS</h2>
+                            </a></li>
+                        <li><a href="biblioteca.html" class="nav-link">
+                                <h2>BIBLIOTECA</h2>
+                            </a></li>
+                        <li><a href="libras.html" class="nav-link">
+                                <h2>LIBRAS</h2>
+                            </a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <main>
+                <div class="content-area">
+                        <div class="grades">
+                            <h2 class="titulo">Calcular Notas</h2>
+                            <p>Selecione a disciplina e insira as duas notas:</p>
+                            <form id="gradeForm">
+                                <div class="campo">
+                                    <label for="disciplina">Disciplina:</label>
+                                    <select id="disciplina" name="disciplina" required>
+                                        <option value="algoritmos">Algoritmos</option>
+                                        <option value="calculo1">Cálculo I</option>
+                                        <option value="fisica1">Física I</option>
+                                        <option value="fisica2">Física II</option>
+                                        <option value="estruturasDados">Estruturas de Dados</option>
+                                        <option value="sistemasOperacionais">Sistemas Operacionais</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="campo-notas">
+                                    <label for="nota1">Nota 1:</label>
+                                    <input type="number" id="nota1" name="nota1" step="0.1" min="0" max="10" required>
+                                    <label for="nota2">Nota 2:</label>
+                                    <input type="number" id="nota2" name="nota2" step="0.1" min="0" max="10" required>
+                                </div>
+                            
+                                <button type="button" onclick="calcularNotas()">Calcular Média</button>
+                            </form>
+                            
+
+                            <h2 class="titulo">Resultado</h2>
+                            <table id="resultTable">
+                                <thead>
+                                    <tr>
+                                        <th>Disciplina</th>
+                                        <th>Média</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resultBody">
+                                    <!-- As linhas com os resultados aparecerão aqui -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="accordion"> 
+  
+                        <a href="#" class="accordion-toggle">Grade Curricular</a>
+                        <div class="accordion-content">
+                          <div class="accordion-inner"> 
+                            <ul>
+                                <li><strong>Disciplina 1:</strong> Algoritmos e
+                                    Programação</li>
+                                <li><strong>Disciplina 2:</strong> Cálculo
+                                    I</li>
+                                <li><strong>Disciplina 3:</strong> Física I</li>
+                                <li><strong>Disciplina 4:</strong> Álgebra
+                                    Linear</li>
+                                <li><strong>Disciplina 5:</strong> Estruturas de
+                                    Dados</li>
+                                <li><strong>Disciplina 6:</strong> Sistemas
+                                    Operacionais</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </main>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    </body>
+            <footer class="rodape_nt">
+        <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
+    </footer>
+</html>

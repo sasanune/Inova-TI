@@ -1,0 +1,452 @@
+/* header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('./info-res.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf4db;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #f0ddaa;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+/* Bloquear scroll horizontal apenas */
+body.no-scroll {
+    overflow-x: hidden;
+    height: 100%; /* Mantém a altura fixa para evitar rolagem */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    align-self: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    margin-right: 55%;
+
+}
+.navbar{
+    color: #f0ddaa;
+}
+
+.navbar-middle,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.navbar-right .icon {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #e32d40;
+    text-decoration: none;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #152b3c;
+}
+
+
+/* Sidebar padrão (inicialmente escondida) */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #e47c5d;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Fora da tela à esquerda */
+    transition: left 0.6s ease-in-out; /* Transição suave para abertura */
+}
+
+/* Quando o aside for visível */
+.sidebar.active {
+    left: 0; /* Mostra o aside */
+}
+
+
+aside {
+    width: 250px;
+    background: #e47c5d; /* color2 */
+    color: white;
+    text-align: center;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside.closed {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+aside h2 {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+aside nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin: 20px 0;
+    transition: font-size 0.2s ease;
+}
+
+aside nav ul li a:hover {
+    text-decoration: none;
+    padding: 7px;
+    background: linear-gradient(#e66d49, #e47c5d);
+    font-size: 14px;
+}
+
+.navbar, .main-content, .rodape_projeto, .sample-header-section, .sample-section-wrap, .collage {
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Abertura rápida */
+  }
+  
+  .navbar.move-right,
+  .main-content.move-right,
+  .sample-header.move-right,
+   .sample-header-section.move-right,
+   .sample-section-wrap.move-right,
+   .collage.move-right{
+    transform: translateX(250px); /* Move 250px para a direita */
+    transition: transform 0.8s ease-in-out; /* Fechamento mais suave e gradual */
+  }
+
+/* Botão de toggle */
+.toggle-button {
+    top: 10px;
+    left: 10px;
+    background-color: #00000000;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #00336600;
+    transform: scale(1.);
+}
+
+#toggle-dark-mode {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mãozinha no hover */
+}
+
+.icon i, .settings-icon i {
+    font-size: 18px; /* Tamanho dos ícones */
+}
+
+.icon, .settings-icon {
+    margin-right: 0px; /* Espaçamento entre os ícones */
+}
+
+.settings-icon {
+    margin-right: 0; /* Remove o espaçamento à direita do último ícone, se necessário */
+}
+
+
+/* estilos especificos */
+
+
+/* Transições e animações */
+.transition, ul li i:before, ul li i:after, p {
+    transition: all 0.25s ease-in-out;
+}
+
+.flipIn, ul li, h1 {
+    animation: flipdown 0.5s ease both;
+}
+
+/* Estilos de seleção */
+.no-select, h2 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Estilos da dropdown */
+.dropdown {
+    min-height: 0;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin: 20px; /* Ajustado para tornar menor */
+    transform: translate(-50%, 0);
+    box-shadow: 0 10px 0 0 #4e4a6d inset;
+    background-color: #fefffa4d;
+    padding: 20px; /* Ajustado para tornar menor */
+    border-radius: 20px;
+    margin-top: 5%;
+}
+
+/* Responsividade */
+@media (max-width: 550px) {
+    body {
+        box-sizing: border-box;
+        transform: translate(0, 0);
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        left: 0;
+    }
+
+    .dropdown {
+        margin: 10px; /* Ajustado para telas pequenas */
+        padding: 15px; /* Ajustado para telas pequenas */
+    }
+}
+
+/* Estilos de texto */
+h1, h2 {
+    color: #1a314a;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    background-color: transparent;
+    margin: 0;
+    cursor: pointer;
+}
+
+p {
+    color: rgba(48, 69, 92, 0.8);
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 14px;
+    z-index: 2;
+}
+
+/* Estilos da lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    border-top: 1px dotted #dce7eb;
+}
+
+ul li:nth-of-type(1) { animation-delay: 0.5s; }
+ul li:nth-of-type(2) { animation-delay: 0.75s; }
+ul li:nth-of-type(3) { animation-delay: 1s; }
+ul li:last-of-type { padding-bottom: 0; }
+
+ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 16px;
+    right: 0;
+}
+
+ul li i:before, ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #dd91cd;
+    width: 3px;
+    height: 9px;
+}
+
+ul li i:before { transform: translate(-2px, 0) rotate(45deg); }
+ul li i:after { transform: translate(2px, 0) rotate(-45deg); }
+
+ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+ul li input[type=checkbox]:checked ~ .content-cards {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+}
+
+ul li input[type=checkbox]:checked ~ i:before {
+    transform: translate(2px, 0) rotate(45deg);
+}
+
+ul li input[type=checkbox]:checked ~ i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* Animação flipdown */
+@keyframes flipdown {
+    0% {
+        opacity: 0;
+        transform-origin: top center;
+        transform: rotateX(-90deg);
+    }
+    5% {
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(8deg);
+    }
+    83% {
+        transform: rotateX(6deg);
+    }
+    92% {
+        transform: rotateX(-3deg);
+    }
+    100% {
+        transform-origin: top center;
+       
+        transform: rotateX(0deg);
+}
+}
+
+/* Estilos dos cartões */
+.content-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px; /* Ajustado para tornar menor */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Ajustado para tornar menor */
+    width: 250px; /* Ajustado para tornar menor */
+    text-align: center;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-icon,
+.check-icon,
+.arrow-icon {
+    font-size: 24px;
+    color: #dd91cd;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #1a314a;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #4e4a6d;
+}
+
+/* Estilos da barra de progresso */
+.progress-bar {
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    background-color: #dd91cd;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Estilos dos botões */
+button {
+    background-color: #8d6b9a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4e4a6d;
+}

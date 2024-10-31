@@ -1,0 +1,210 @@
+/* Responsividade para telas grandes (até 1200px) */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+        margin-left: 15px;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+}
+
+/* Responsividade para telas médias (até 992px) */
+@media (max-width: 992px) {
+    .navbar-left {
+        margin-right: 50%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .nav-item {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para tablets (até 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left {
+        margin-right: 0;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header {
+        font-size: 1.6rem;
+    }
+}
+
+/* Responsividade para celulares (até 576px) */
+@media (max-width: 576px) {
+    .logo {
+        width: 100px;
+    }
+
+    .header {
+        font-size: 1.4rem;
+    }
+
+    .nav-item {
+        font-size: 0.7rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+
+/* Modo noturno */
+body.dark-mode {
+    background-color: #1b3549; /* Fundo azul */
+    color: #e0e0e0; /* Cor do texto */
+}
+
+.dark-mode .navbar {
+    background-color: #152b3c; /* Cor de fundo da navbar */
+    color: #e0e0e0; /* Cor do texto da navbar */
+}
+
+.dark-mode .sidebar {
+    background-color: #152b3c; /* Cor de fundo da sidebar */
+    color: #e0e0e0; /* Cor do texto da sidebar */
+}
+
+.dark-mode a {
+    color: #f0ddaa; /* Cor dos links */
+}
+
+.dark-mode .et-hero-tab {
+    background-color: #10212e;
+}
+
+.dark-mode a:hover {
+    color: #081620; /* Cor dos links ao passar o mouse */
+}
+
+.dark-mode .course-card {
+    background-color: #152b3c; /* Cor de fundo do card */
+    border: 1px solid #10212e; /* Cor da borda do card */
+}
+
+.dark-mode .course-card h3 {
+    color: #e0e0e0; /* Cor do texto do card */
+}
+
+.dark-mode footer {
+    background-color: #152b3c; /* Cor de fundo do rodapé */
+    color: #e0e0e0; /* Cor do texto do rodapé */
+}
+
+.dark-mode .bubble {
+    background: rgba(255, 255, 255, 0.1); /* Cor das bolhas */
+}
+
+.dark-mode .user-menu {
+    color: #f0ddaa; /* Cor do menu do usuário */
+}
+
+/* Estilos para formulários */
+.dark-mode input, 
+.dark-mode textarea {
+    background-color: #1e1e1e; /* Fundo dos campos de entrada */
+    color: #e0e0e0; /* Texto claro nos campos de entrada */
+    border: 1px solid #444; /* Borda dos campos */
+}
+
+
+.dark-mode .button:hover {
+    background-color: #3700b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo das tabelas */
+.dark-mode table {
+    background-color: #1e1e1e; /* Fundo da tabela */
+    color: #e0e0e0; /* Texto da tabela */
+}
+
+.dark-mode th {
+    background-color: #152b3c; /* Cor de fundo do cabeçalho da tabela */
+    color: #ffffff; /* Texto do cabeçalho em branco */
+}
+
+.dark-mode td {
+    border: 1px solid #444; /* Borda das células */
+}
+
+/* Estilo dos cartões e outros elementos */
+.dark-mode .card {
+    background-color: #1e1e1e; /* Cor de fundo dos cartões */
+    border: 1px solid #444; /* Borda dos cartões */
+}
+
+/* Outros elementos que podem ser necessários */
+.dark-mode .alert {
+    background-color: #333; /* Fundo das mensagens de alerta */
+    color: #fff; /* Texto das mensagens de alerta */
+}
+
+.dark-mode .sample-section-wrap {
+    background-color: #1b3549;
+}
+
+.dark-mode .curso-box {
+    background-color: #10212e; }
+
+.dark-mode .diferenciais-section {
+    margin-top: 40px; /* Aumenta a margem superior da seção de diferenciais */
+    color: #fff;}
+
+.dark-mode .diferenciais-list li, .titulos h3, .conteudo p, .conteudo ul{
+    color: #fff;
+}
+
+.dark-mode .conteudo > *{
+    background-color: #10212e;
+}
+
+.dark-mode .et-slide, .dark-mode .et-hero-tabs{
+    background-color: #152b3c;
+    color: #fff;
+    background: #152b3c;
+}
+
+.dark-mode .et-hero-tabs h1,
+.dark-mode .et-slide h1, .dark-mode .et-hero-tabs h3,
+.dark-mode .et-slide h3, .dark-mode h5 {
+    color: #fff;
+}
+
+.dark-mode .et-hero-tabs{
+    background: #152b3c;
+    background-color: #152b3c;
+}
+
+.dark-mode .et-hero-tabs-container{
+    background-color: #081620;
+}
+

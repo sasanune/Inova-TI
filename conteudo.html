@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaTI</title>
+    <link rel="stylesheet" href="./styles/conteudo.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="menu">
+            <button id="toggle-aside" class="toggle-button">☰</button>
+        </div>
+
+        <div class="navbar-left">
+            <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
+        </div>
+
+        <div class="navbar-right">
+            <a href="#" class="icon">
+                <i class="ri-mail-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-chat-1-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-notification-3-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-settings-2-line"></i>
+            </a>
+            <button id="toggle-dark-mode" class="icon">
+                <i class="ri-moon-line"></i>
+            </button>
+            <div class="user-menu">
+                <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                    NOME DO ALUNO
+                </span>
+            </div>
+        </div>
+    </header>
+<body>
+    <div class="dashboard-container">
+        <aside id="sidebar" class="sidebar">
+                <nav>
+                <ul>
+                    <li><a href="main.html" class="nav-link"><h2>Home</h2></a></li>
+                    <li><a href="info.html" class="nav-link"><h2>Info</h2></a></li>
+                    <li><a href="gradeCurricular.html" class="nav-link"><h2>Notas</h2></a></li>
+                    <li><a href="libras.html" class="nav-link"><h2>Libras</h2></a></li>
+                </ul>
+            </nav>
+        </aside>
+  <main>
+
+<div class="dropdown">
+    <h1>Conteúdos da Matéria</h1>
+    <ul>
+        <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>1º BIMESTRE</h2>
+            <section class="content-cards">
+                <div class="card">
+                    <h2>Plano de Ensino</h2>
+                    <p>2 tópicos concluídos</p>
+                    <div class="progress-bar"><div class="progress" style="width:100%;"></div></div>
+                    <a href="plano-ensino.html" class="btn">Ver Conteúdo</a>
+                </div>
+
+                <div class="card">
+                    <h2>E-Books</h2>
+                    <p>Biblioteca</p>
+                    <div class="progress-bar"><div class="progress" style="width:0%;"></div></div>
+                    <a href="pag_biblioteca.html" class="btn">Ver Conteúdo</a>
+                </div>
+
+                <div class="card">
+                    <h2>Materiais para Estudo</h2>
+                    <p>28 tópicos concluídos</p>
+                    <div class="progress-bar"><div class="progress" style="width:100%;"></div></div>
+                    <a href="materiais.html" class="btn">Ver Conteúdo</a>
+                </div>
+            </section>
+        </li>
+        <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>2º BIMESTRE</h2>
+            <section class="content-cards">
+                <div class="card">
+                    <h2>Plano de Ensino</h2>
+                    <p>2 tópicos concluídos</p>
+                    <div class="progress-bar"><div class="progress" style="width:100%;"></div></div>
+                    <a href="plano-ensino.html" class="btn">Ver Conteúdo</a>
+                </div>
+
+                <div class="card">
+                    <h2>E-Books</h2>
+                    <p>Biblioteca</p>
+                    <div class="progress-bar"><div class="progress" style="width:0%;"></div></div>
+                    <a href="biblioteca.html" class="btn">Ver Conteúdo</a>
+                </div>
+
+                <div class="card">
+                    <h2>Materiais para Estudo</h2>
+                    <p>28 tópicos concluídos</p>
+                    <div class="progress-bar"><div class="progress" style="width:100%;"></div></div>
+                    <a href="materiais.html" class="btn">Ver Conteúdo</a>
+                </div>
+            </section>
+        </li>
+        <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>CONTEÚDO COMPLEMENTAR</h2>
+            <section class="content-cards">              
+                <div class="card">
+                    <h2>E-Books</h2>
+                    <p>Biblioteca</p>
+                    <div class="progress-bar"><div class="progress" style="width:0%;"></div></div>
+                    <button id="btn" class="content-button">Ver Conteúdo</button>
+                </div>
+            </section>
+        </li>
+    </ul>
+</div>
+
+</main>
+<script type="module" src="./scripts/conteudo.js"></script>
+</body>
+</html>

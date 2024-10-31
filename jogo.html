@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/jogos.css">
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <title>Jogo Da Memória</title>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="menu">
+                <button id="toggle-aside" class="toggle-button">☰</button>
+            </div>
+    
+            <div class="navbar-left">
+                <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
+            </div>
+    
+            <div class="navbar-right">
+                <a href="#" class="icon">
+                    <i class="ri-mail-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-chat-1-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-notification-3-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-settings-2-line"></i>
+                </a>
+                <button id="toggle-dark-mode" class="icon">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <div class="user-menu">
+                    <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                        NOME DO ALUNO
+                    </span>
+                </div>
+            </div>
+        </header>
+    
+        <div class="dashboard-container">
+            <aside id="sidebar" class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="main.html" class="nav-link">
+                                <h2>HOME</h2>
+                            </a></li>
+                        <li><a href="info.html" class="nav-link">
+                                <h2>INFO</h2>
+                            </a></li>
+                        <li><a href="gradeCurricular.html" class="nav-link">
+                                <h2>NOTAS</h2>
+                            </a></li>
+                        <li><a href="biblioteca.html" class="nav-link">
+                                <h2>BIBLIOTECA</h2>
+                            </a></li>
+                        <li><a href="libras.html" class="nav-link">
+                                <h2>LIBRAS</h2>
+                            </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+        <main>
+            <style>
+            </style>
+            <body>
+                <h1>Jogo da Memória</h1>
+                <div id="game-board"></div>
+                <button id="reset-button">Reiniciar Jogo</button>
+                <script type="module" src="./script/jogo.js"></script>
+            </body>
+            </html>
+        </main>
+    </div>
+
+    <script type="module" src="./scripts/jogo.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>

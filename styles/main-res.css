@@ -1,0 +1,195 @@
+/* Estilos globais para dispositivos pequenos (celulares) */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-left, .navbar-middle, .navbar-right {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .navbar-middle, .navbar-right {
+        flex-direction: column;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr; /* Mostra um card por linha */
+    }
+
+    .main-content {
+        padding: 10px;
+        margin-left: 0; /* Remove margem lateral para pequenas telas */
+    }
+
+    .course-card {
+        width: 100%; /* Faz o card ocupar toda a largura disponível */
+        height: auto; /* Deixa a altura se ajustar automaticamente */
+    }
+
+    .info-section {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .rodape_projeto {
+        font-size: 10px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(2, 1fr); /* Mostra dois cards por linha */
+    }
+
+    .course-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-section {
+        margin-left: 10px;
+    }
+}
+/* Responsividade para telas grandes (até 1200px) */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+        margin-left: 15px;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+}
+
+/* Responsividade para telas médias (até 992px) */
+@media (max-width: 992px) {
+    .navbar-left {
+        margin-right: 50%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .nav-item {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para tablets (até 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left {
+        margin-right: 0;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header {
+        font-size: 1.6rem;
+    }
+}
+
+/* Responsividade para celulares (até 576px) */
+@media (max-width: 576px) {
+    .logo {
+        width: 100px;
+    }
+
+    .header {
+        font-size: 1.4rem;
+    }
+
+    .nav-item {
+        font-size: 0.7rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Modo noturno */
+body.dark-mode {
+    background-color: #152b3c; /* Fundo azul */
+    color: #e0e0e0; /* Cor do texto */
+}
+
+.dark-mode .navbar {
+    background-color: #152b3c; /* Cor de fundo da navbar */
+    color: #e0e0e0; /* Cor do texto da navbar */
+}
+
+.dark-mode .sidebar {
+    background-color: #152b3c; /* Cor de fundo da sidebar */
+    color: #e0e0e0; /* Cor do texto da sidebar */
+}
+
+.dark-mode a {
+    color: #bb86fc; /* Cor dos links */
+}
+
+.dark-mode .course-card {
+    background-color: #152b3c; /* Cor de fundo do card */
+    border: 1px solid #10212e; /* Cor da borda do card */
+}
+
+.dark-mode .course-card h3 {
+    color: #e0e0e0; /* Cor do texto do card */
+}
+
+.dark-mode footer {
+    background-color: #152b3c; /* Cor de fundo do rodapé */
+    color: #e0e0e0; /* Cor do texto do rodapé */
+}
+
+.dark-mode .bubble {
+    background: rgba(255, 255, 255, 0.1); /* Cor das bolhas */
+}
+
+.dark-mode .user-menu{
+    color: #f0ddaa;
+}
+

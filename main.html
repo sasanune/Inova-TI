@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main-res.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Página do AVA</title>
+    <style>
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            /* Ajuste de cor e opacidade */
+            filter: blur(5px);
+            /* Efeito de desfoque */
+            animation: bubbleAnimation 15s infinite;
+            /* Animação das bolhas */
+        }
+
+        /* Tamanhos aleatórios para as bolhas */
+        .bubble.small {
+            width: 20px;
+            height: 20px;
+        }
+
+        .bubble.medium {
+            width: 30px;
+            height: 30px;
+        }
+
+        .bubble.large {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Animação das bolhas */
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-150px) scale(1.2);
+                /* Movimento vertical e aumento de tamanho */
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+        }
+
+        /* Ajustes para a Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: rgba(26, 49, 74, 0);
+            /* Cor de fundo transparente */
+            color: #fff;
+            position: relative;
+            z-index: 10;
+        }
+
+        body {
+    background-color: #f0ddaa; /* Cor de fundo */
+    background-image:
+        radial-gradient(at 4% 0%, #e47c5d 0px, transparent 20%), /* Cor #e47c5d */
+        radial-gradient(at 83% 72%, #e32d40 0px, transparent 20%), /* Cor #e32d40 */
+        radial-gradient(at 98% 32%, #59b390 0px, transparent 20%), /* Cor #59b390 */
+        radial-gradient(at 82% 68%, #e47c5d 0px, transparent 20%), /* Cor #e47c5d */
+        radial-gradient(at 44% 80%, #e32d40 0px, transparent 20%), /* Cor #e32d40 */
+        radial-gradient(at 56% 40%, #59b390 0px, transparent 20%), /* Cor #59b390 */
+        radial-gradient(at 30% 77%, #e32d40 0px, transparent 20%); /* Cor #e32d40 */
+    background-size: 200% 200%;
+    animation: moveGradients 45s ease-in-out infinite; /* A animação permanece com duração de 45s */
+}
+
+
+        @keyframes moveGradients {
+            0% {
+                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%, 0% 0%, 75% 25%, 100% 50%, 25% 75%, 100% 100%, 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%, 50% 0%, 100% 50%, 50% 50%, 0% 100%, 25% 0%, 50% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%, 100% 50%, 50% 50%, 0% 0%, 75% 75%, 50% 0%, 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bolhas -->
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.3); width: 30px; height: 30px; top: 20%; left: 10%; animation-delay: 0s; filter: blur(8px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.2); width: 40px; height: 40px; top: 30%; left: 70%; animation-delay: 1s; filter: blur(10px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.25); width: 25px; height: 25px; top: 60%; left: 50%; animation-delay: 2s; filter: blur(6px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.35); width: 35px; height: 35px; top: 80%; left: 20%; animation-delay: 3s; filter: blur(7px);">
+    </div>
+
+    <header class="navbar">
+        <div class="menu">
+            <button id="toggle-aside" class="toggle-button">☰</button>
+        </div>
+
+        <div class="navbar-left">
+            <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
+        </div>
+
+        <div class="navbar-right">
+            <a href="#" class="icon">
+                <i class="ri-mail-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-chat-1-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-notification-3-line"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="ri-settings-2-line"></i>
+            </a>
+            <button id="toggle-dark-mode" class="icon">
+                <i class="ri-moon-line"></i>
+            </button>
+            <div class="user-menu">
+                <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                    NOME DO ALUNO
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside id="sidebar" class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="main.html" class="nav-link">
+                            <h2>HOME</h2>
+                        </a></li>
+                    <li><a href="info.html" class="nav-link">
+                            <h2>INFO</h2>
+                        </a></li>
+                    <li><a href="gradeCurricular.html" class="nav-link">
+                            <h2>NOTAS</h2>
+                        </a></li>
+                    <li><a href="biblioteca.html" class="nav-link">
+                            <h2>BIBLIOTECA</h2>
+                        </a></li>
+                    <li><a href="libras.html" class="nav-link">
+                            <h2>LIBRAS</h2>
+                        </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="course-section">
+                <div class="course-list">
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">Nivelamento Estudo de Robótica
+                                com Arduino 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">Algoritmos e
+                                Programação Estruturada
+                                2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">Ciência
+                                da Computação 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">Sistemas
+                                Computacionais - 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">Engenharia de Software -
+                                2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="conteudo.html">
+                            <h3 class="pga1">CÁLCULO DIFERENCIAL E INTEGRAL - 2024/2</h3>
+                        </a>
+                    </div>
+                </div><br>
+            </div>
+    </div>
+    <footer class="rodape_projeto" id="footer" style="display: none;">
+        <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos
+            os direitos reservados</p>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>

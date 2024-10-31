@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Informações</title>
+        <link rel="stylesheet" href="./styles/info.css">
+        <link rel="stylesheet" href="./styles/info-res.css">       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="menu">
+                <button id="toggle-aside" class="toggle-button">☰</button>
+            </div>
+
+            <div class="navbar-left">
+                <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
+            </div>
+
+            <div class="navbar-right">
+                <a href="#" class="icon">
+                    <i class="ri-mail-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-chat-1-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-notification-3-line"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="ri-settings-2-line"></i>
+                </a>
+                <button id="toggle-dark-mode" class="icon">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <div class="user-menu">
+                    <span id="user-name"
+                        style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                        NOME DO ALUNO
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-container">
+            <aside id="sidebar" class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="main.html" class="nav-link">
+                                <h2>HOME</h2>
+                            </a></li>
+                        <li><a href="info.html" class="nav-link">
+                                <h2>INFO</h2>
+                            </a></li>
+                        <li><a href="gradeCurricular.html" class="nav-link">
+                                <h2>NOTAS</h2>
+                            </a></li>
+                        <li><a href="biblioteca.html" class="nav-link">
+                                <h2>BIBLIOTECA</h2>
+                            </a></li>
+                        <li><a href="libras.html" class="nav-link">
+                                <h2>LIBRAS</h2>
+                            </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Cabeçalho com efeito parallax -->
+            <div class="sample-header">
+                <div class="sample-header-section">
+                    <section class="instituicao">
+                        <h2>BEM-VINDO À INOVATI</h2>
+                        <p>A InovaTI é uma instituição de ensino superior
+                            dedicada a formar profissionais de excelência no
+                            campo
+                            da Tecnologia da Informação. Fundada com o objetivo
+                            de promover a inovação e o desenvolvimento de
+                            soluções tecnológicas, a InovaTI oferece uma
+                            abordagem prática e orientada para o futuro,
+                            capacitando seus alunos a enfrentar os desafios de
+                            um mercado em constante evolução.</p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="sample-section-wrap">
+                <div class="sample-section">
+                    <div class="missao-valores">
+                        <div class="titulos">
+                            <h3>Missão</h3>
+                            <h3>Visão</h3>
+                            <h3>Valores</h3>
+                        </div>
+                        <div class="conteudo">
+                            <div class="missao">
+                                <p>A missão da InovaTI é moldar o futuro da tecnologia, capacitando a próxima geração de líderes e inovadores por meio de uma educação avançada e inclusiva. Nossos cursos são constantemente atualizados para garantir que os alunos adquiram habilidades relevantes, abrangendo ferramentas tecnológicas emergentes e fundamentos em ciências de dados. Acreditamos que a tecnologia deve ser uma força para o bem, promovendo soluções que respeitem o meio ambiente e incentivem a inclusão social, preparando profissionais conscientes da responsabilidade social nas inovações que criam.</p>
+                            </div>
+                            <div class="visao">
+                                <p>A InovaTI se posiciona como uma instituição visionária, dedicada a ser referência mundial no desenvolvimento de talentos e soluções tecnológicas que moldem o futuro da sociedade digital. Nossa abordagem inovadora visa não apenas formar profissionais altamente capacitados, mas também inspirar a criação de soluções que impactem positivamente o mundo, preparando nossos alunos para enfrentar os desafios de um mercado em constante evolução.</p>
+                            </div>
+                            <div class="valores">
+                                <ul>
+                                    <li>Inovação:</li>
+                                    <p>Buscamos constantemente novas abordagens para resolver problemas e aprimorar soluções existentes.</p>
+                                    <li>Excelência:</li>
+                                    <p>Comprometemo-nos a oferecer um ensino de alta qualidade que prepare nossos alunos para os desafios do futuro.</p>
+                                    <li>Sustentabilidade:</li>
+                                    <p>Valorizamos o uso responsável da tecnologia, promovendo práticas que respeitam o meio ambiente.</p>
+                                    <li>Inclusão:</li>
+                                    <p>Acreditamos que a tecnologia deve ser acessível a todos, promovendo oportunidades equitativas.</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+                </section>
+                <div class="collage">
+                    <div class="photo-block">
+                        <div class="photo-grid">
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=1"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=2"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=3"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=4"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=5"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=6"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=7"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=8"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=9"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=10"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=11"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=12"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=13"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=14"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=15"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=16"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=17"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=18"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=19"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=20"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=21"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=22"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=23"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=24"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=25"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=26"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=27"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=28"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=29"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=30"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=31"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=32"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=33"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=34"
+                                    alt></div>
+                            <div class="photo"><img
+                                    src="https://picsum.photos/600/800?random=35"
+                                    alt></div>
+                        </div>
+                    </div>
+                    <div class="indicators">
+                        <div class="progress progress--enter">
+                            <div class="progress__bar"></div>
+                            <div class="progress__label">enter</div>
+                        </div>
+                        <div class="progress progress--exit">
+                            <div class="progress__bar"></div>
+                            <div class="progress__label">exit</div>
+                        </div>
+                        <div class="progress progress--cover">
+                            <div class="progress__bar"></div>
+                            <div class="progress__label">cover</div>
+                        </div>
+                        <div class="progress progress--contain">
+                            <div class="progress__bar"></div>
+                            <div class="progress__label">contain</div>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                        <div>
+                    <h3>História</h3>
+                    <p>A InovaTI foi fundada com o objetivo de oferecer uma
+                        educação alinhada às rápidas mudanças da era
+                        digital. Criada por especialistas em tecnologia e
+                        educação, a instituição surgiu para formar
+                        profissionais preparados para o futuro.</p>
+
+
+                <h3>Cursos Oferecidos</h3>
+                <div class="cursos-grid">
+                    <div class="curso-box">
+                        <h4>Ciências da Computação</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Engenharia de Software</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Sistemas de Informação</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Segurança da Informação</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Inteligência Artificial</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Análise de Dados e Big Data</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Desenvolvimento Web e Mobile</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Análise e Desenvolvimento de Sistemas</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Redes de Computadores</h4>
+                    </div>
+                    <div class="curso-box">
+                        <h4>Gestão de TI</h4>
+                    </div>
+                </div>
+
+                <div class="diferenciais-section">
+                    <h3>Diferenciais</h3>
+                    <ul class="diferenciais-list">
+                        <li><strong>Laboratórios Avançados:</strong>
+                            Equipados com as mais recentes tecnologias.</li>
+                        <li><strong>Parcerias com Empresas de
+                                Tecnologia:</strong> Conexão direta com o
+                            mercado.</li>
+                        <li><strong>Projetos Inovadores:</strong> Incentivo
+                            à criação de soluções reais.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="rodape_projeto" id="footer" style="display: none;">
+            <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos
+                os direitos reservados</p>
+        </footer>
+
+            <script type="module" src="./scripts/info.js"></script>
+
+        </body>
+    </html>
